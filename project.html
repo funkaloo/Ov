@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Ovr Project</title>
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
+	<script language="JavaScript" src="js/jquery-1.7.1.min.js"></script>
+	<script language="JavaScript" src="js/bootstrap.min.js"></script>
+	<script language="JavaScript" src="js/bootstrap-dropdown.js"></script>
+	<script language="JavaScript" src="js/bootstrap-modals.js"></script>
+	<script language="JavaScript" src="js/jquery.mousewheel.js"></script>
+	<script language="JavaScript" src="js/jquery.jscrollpane.min.js"></script>
+  <script language="JavaScript" src="js/project.us.modals.js"></script>
+	  
+	<style type="text/css">
+		.test
+		{
+			height:790px;
+		}
+		
+			/*scrollpane custom CSS*/
+		.jspVerticalBar {
+			width: 8px;
+			background: transparent;
+			right:10px;
+		}
+		
+		.jspHorizontalBar {
+			bottom: 5px;
+			width: 100%;
+			height: 8px;
+			background: transparent;
+		}
+		.jspTrack {
+			background: transparent;
+		}
+		
+		.jspDrag {
+			background: url(img/transparent-black.png) repeat;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			border-radius:4px;
+		}
+		
+		.jspHorizontalBar .jspTrack,
+		.jspHorizontalBar .jspDrag {
+			float: left;
+			height: 100%;
+		}
+			
+		.jspCorner {
+			display:none
+		}
+
+	</style>
+	<head>
+
+	</head>
+	<body>
+    <div id="myModal" class="modal hide fade">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal" >&times;</a>
+        <ul class="nav nav-pills">
+        	<li class="dropdown">
+        		<a class="dropdown-toggle" data=toggle="dropdown" href="#">Projects <b class="caret"></b></a>
+        		<ul class="dropdown-menu">
+        			<li><a href="#">Project Manager</a></li>
+        			<li><a href="#">Check Stuff</a></li>
+        		</ul>
+        </ul>
+      </div>
+      <div class="modal-body scrollable">
+      	
+      	<div clas="row">
+      		<div class="span7">
+		        <h4>Summary</h4>
+		        <dl>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</dl>
+		
+		        <h4>Goals</h4>
+		        <p>This <a href="#" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on hover.</p>
+		
+		        <h4>Tooltips in a modal</h4>
+		        <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+		
+		        <hr>
+		        <h4>Overflowing text to show optional scrollbar</h4>
+		        <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+		        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+		        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+		        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		        <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+		        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+		        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+		        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+      		</div>
+      	</div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
+
+	</body>
+</html>

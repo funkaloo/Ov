@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Ovr Project</title>
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/chosen.css">
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
+	<script language="JavaScript" src="js/jquery-1.7.1.min.js"></script>
+	<script language="JavaScript" src="js/bootstrap.min.js"></script>
+	<script language="JavaScript" src="js/bootstrap-dropdown.js"></script>
+	<script language="JavaScript" src="js/bootstrap-tooltip.js"></script>
+	<script language="JavaScript" src="js/bootstrap-popovers.js"></script>
+	<script language="JavaScript" src="js/jquery.mousewheel.js"></script>
+	<script language="JavaScript" src="js/jquery.jscrollpane.min.js"></script>
+	<script language="JavaScript" src="js/chosen.jquery.min.js"></script>
+  <script language="JavaScript" src="js/project.us.modals.js"></script>
+	  
+	<style type="text/css">
+		.test
+		{
+			height:790px;
+		}
+		
+			/*scrollpane custom CSS*/
+		.jspVerticalBar {
+			width: 8px;
+			background: transparent;
+			right:10px;
+		}
+		
+		.jspHorizontalBar {
+			bottom: 5px;
+			width: 100%;
+			height: 8px;
+			background: transparent;
+		}
+		.jspTrack {
+			background: transparent;
+		}
+		
+		.jspDrag {
+			background: url(img/transparent-black.png) repeat;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			border-radius:4px;
+		}
+		
+		.jspHorizontalBar .jspTrack,
+		.jspHorizontalBar .jspDrag {
+			float: left;
+			height: 100%;
+		}
+			
+		.jspCorner {
+			display:none
+		}
+		
+		.us-section-header {
+			width: 100%;
+			margin: 0 auto;
+			position:relative;
+		}
+		
+		.us-section-header-left {
+			float: left;
+			width: 400px;
+			margin: 0 auto;
+		}
+		
+		.us-section-header-right {
+			float: right;
+			width: 100px;
+			margin: 3px 15px 0px 0px;
+			text-align: right;
+		}
+		
+		.us-section-content {
+			margin: 5px 5px 5px 5px;
+		}
+		.no-underline:hover {
+			text-decoration: none;
+		}
+		
+		.no-search div.chzn-search {
+		  display: none;
+		}
+	</style>
+	<head>
+
+	</head>
+	<body>
+    <div id="story_view" class="modal hide fade">
+      <div class="modal-header"><h2>Sprint <span style="color:#999999;">20</span>, User Story <span style="color:#999999;">1</span></h2>
+        <a class="close" data-dismiss="modal" >&times;</a>
+        <ul class="nav nav-pills">
+        	<!-- <li class="dropdown">
+        		<a class="dropdown-toggle" data=toggle="dropdown" href="#">Projects <b class="caret"></b></a>
+        		<ul class="dropdown-menu">
+        			<li><a href="#">Todo List</a></li>
+        			<li><a href="#">Check Stuff</a></li>
+        		</ul>
+        	</li> -->
+        </ul>
+      </div>
+      <div class="modal-body scrollable">
+      	
+      	<div clas="row">
+      		<div class="span7">
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Project</h3></div>
+							<div class="us-section-header-right"><h3>Points</h3></div>
+						</div>
+						<div class="us-section-header clearfix">
+							<div class="us-section-header-left">
+		      			<h1 style="color:#999999">Firefox</h1>
+		      		</div>
+							<div class="us-section-header-right no-search">
+		      			<h1 style="color:#999999">40</h1>
+		      		</div>
+	      		</div>
+      			
+      			<br><br>
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Summary</h3></div>
+      				<div class="us-section-header-right"><a class="no-underline" href="#"><span class="label label-warning preview-or-edit"><i class="icon-pencil icon-white"></i>edit</span></a></div>
+      			</div>
+		        <div class="us-section-content editable">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+		        </div>
+		        
+		        <br>
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Associated Personas</h3></div>
+      				<div class="us-section-header-right"><a class="no-underline" href="#"><span class="label label-warning" onmousedown="javascript:edit('hi');"><i class="icon-pencil icon-white"></i>edit</span></a></div>
+      			</div>
+		        <div class="us-section-content editable">
+		        	<img src="img/icons/bird.png" height="50px" width="50px" id="bird" data-original-title="Bird Dude" 
+		        	data-content="Thrall (birthname Go'el), son of Durotan (born 2 years ADP), was the Warchief of the restored orcish Horde and ruler of the red land of Durotar in Kalimdor.">
+		        	<img src="img/icons/giraffe.png" height="50px" width="50px" id="giraffe" data-original-title="Giraffe Dude"
+		        	data-content="Thrall (birthname Go'el), son of Durotan (born 2 years ADP), was the Warchief of the restored orcish Horde and ruler of the red land of Durotar in Kalimdor.">
+		        	<img src="img/icons/cow.png" height="50px" width="50px" id="cow" data-original-title="Cow Dude"
+		        	data-content="Thrall (birthname Go'el), son of Durotan (born 2 years ADP), was the Warchief of the restored orcish Horde and ruler of the red land of Durotar in Kalimdor.">
+		        	<img src="img/icons/hippo.png" height="50px" width="50px" id="hippo" data-original-title="Hippo Dude"
+		        	data-content="Thrall (birthname Go'el), son of Durotan (born 2 years ADP), was the Warchief of the restored orcish Horde and ruler of the red land of Durotar in Kalimdor.">
+		        </div>
+		        <br>
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Business Needs</h3></div>
+      			</div>
+      			<table class="table table-striped">
+      				<thead>
+      					<tr>
+      						<th style="width:420px;">Criteria</th>
+      						<th style="width:80px;">Rating</th>
+      					</tr>
+      				</thead>
+      				<tbody>
+      					<tr>
+      						<td>Makes boring stuff more efficient.</td>
+      						<td>
+	      						<div class="badge badge-success" style="text-align:center;">5</div>
+      						</td>
+      					</tr>
+      					<tr>
+      						<td>People are happy.</td>
+      						<td>
+	      						<div class="badge badge-info" style="text-align:center;">4</div>
+      						</td>
+      					</tr>
+      					<tr>
+      						<td>Money maker.</td>
+      						<td>
+	      						<div class="badge badge-warning" style="text-align:center;">3</div>
+      						</td>
+      					<tr>
+      						<td>Provides cookies.</td>
+      						<td>
+	      						<div class="badge badge-error" style="text-align:center;">0</div>
+      						</td>
+      					</tr>
+      				</tbody>
+      			</table>
+		        <br>
+		        <h3>Acceptance Criteria</h3>
+		        <div class="us-section-content">
+		        		<div style="width:100%;">
+				        	<div class="progress progress-striped progress-success">
+				        		<div class="bar" style="width: 66%"></div> 2/3
+				        	</div>
+		        		</div>
+      			<table class="table table-striped">
+      				<thead>
+      					<tr>
+      						<th style="width:420px;">Criteria</th>
+      						<th style="width:80px;">Status</th>
+      					</tr>
+      				</thead>
+      				<tbody>
+      					<tr>
+      						<td>It should have this.</td>
+      						<td>
+	      						<div class="badge badge-success" style="text-align:center;">Complete</div>
+      						</td>
+      					</tr>
+      					<tr>
+      						<td>It should have some more of this.</td>
+      						<td>
+	      						<div class="badge badge-success" style="text-align:center;">Complete</div>
+      						</td>
+      					</tr>
+      					<tr>
+      						<td>And more stuff like this.</td>
+      						<td>
+	      						<div class="badge" style="text-align:center;">Incomplete</div>
+      						</td>
+      				</tbody>
+      			</table>
+		        </div>
+		        <br>
+		        <h3>Notes</h3>
+		        <div class="us-section-content">
+			        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+			        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		        </div>
+		      </div>
+      	</div>
+      </div>
+      <div class="modal-footer">
+      	<center>
+        <a href="#" class="btn" data-dismiss="modal" ><i class="icon-chevron-left"></i>Previous User Story</a>
+        <a href="#" class="btn btn-primary">Next User Story<i class="icon-chevron-right icon-white"></i></a>
+        </center>
+      </div>
+    </div>
+    
+    
+    <!-- EDIT -->
+    <div id="story_edit" class="modal hide fade">
+      <div class="modal-header"><h2>Sprint <span style="color:#999999;">20</span>, User Story <span style="color:#999999;">2</span></h2>
+        <a class="close" data-dismiss="modal" >&times;</a>
+        <ul class="nav nav-pills">
+        	<!-- <li class="dropdown">
+        		<a class="dropdown-toggle" data=toggle="dropdown" href="#">Projects <b class="caret"></b></a>
+        		<ul class="dropdown-menu">
+        			<li><a href="#">Todo List</a></li>
+        			<li><a href="#">Check Stuff</a></li>
+        		</ul>
+        	</li> -->
+        </ul>
+      </div>
+      <div class="modal-body scrollable">
+      	
+      	<div clas="row">
+      		<div class="span7">
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Project</h3></div>
+							<div class="us-section-header-right"><h3>Points</h3></div>
+						</div>
+						<div class="us-section-header clearfix">
+							<div class="us-section-header-left">
+		      			<select data-placeholder="Choose a Project" class="chzn-select" style="width:200px;">
+		      				<option value=""></option>
+		      				<optgroup label="Team Pink Pwnies">
+			      				<option value="Calculator">Calculator</option>
+			      				<option value="Project Manager">Todo List</option>
+			      				<option value="Check Stuff">Check Stuff</option>
+			      				<option value="Calendar">Calendar</option>
+		      				</optgroup>
+		      				<optgroup label="Team Rocket">
+			      				<option value="Refrigerator">Refrigerator</option>
+			      				<option value="Microwave">Microwave</option>
+			      				<option value="Toaster">Toaster</option>
+		      				</optgroup>
+		      			</select>
+		      		</div>
+		      		<!--
+							<div class="us-section-header-right no-search">
+		      			<select data-placeholder="Choose a Point Value" class="chzn-select" style="width:50px;">
+		      				<option value="0">0</option>
+		      				<option value="1">1</option>
+		      				<option value="2">2</option>
+		      				<option value="3">3</option>
+		      				<option value="5">5</option>
+		      				<option value="8">8</option>
+		      				<option value="13">13</option>
+		      				<option value="20">20</option>
+		      				<option value="40">40</option>
+		      				<option value="100">100</option>
+		      			</select>
+		     			</div> -->
+		     			<div class="us-section-header-right"><input type="text" style="width:50px"></input></div>
+	      		</div>
+      			
+      			<br><br>
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Summary</h3></div>
+      				<div class="us-section-header-right"></div>
+      			</div>
+		        <div class="us-section-content editable"><textarea id="summary" rows="3" style="width:500px; resize:none;">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</textarea>
+		        </div>
+		        
+		        <br>
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Associated Personas</h3></div>
+      			</div>
+		        <div class="us-section-content editable">
+		        	<select data-placeholder="Select Associated Personas" style="width:500px;" class="chzn-select" multiple>
+		        		<optgroup label="Persona Groups">
+		        			<option value="Team Pink Pwnies">Team Pink Pwnies</option>
+		        			<option value="Team Rocket">Team Rocket</option>
+		        		</optgroup>
+		        		<optgroup label="People">
+		        			<option value="Keita Sumikawa">Keita Sumikawa</option>
+		        			<option value="John Smith">John Smith</option>
+		        			<option value="Jesse">Jesse</option>
+		        			<option value="James">James</option>
+		        			<option value="Meowth">Meowth</option>
+		        		</optgroup>
+		        	</select>
+		        </div>
+		        <br>
+      			<div class="us-section-header clearfix">
+      				<div class="us-section-header-left"><h3>Business Needs</h3></div>
+      			</div>
+      			<table class="table table-striped">
+      				<thead>
+      					<tr>
+      						<th style="width:80%;">Criteria</th>
+      						<th style="width:20%;">Rating</th>
+      					</tr>
+      				</thead>
+      				<tbody>
+      					<tr>
+      						<td>Makes boring stuff more efficient.</td>
+      						<td>
+	      						<div class="no-search">
+					      			<select data-placeholder="Choose a Point Value" class="chzn-select" style="width:50px;">
+					      				<option value="0">0</option>
+					      				<option value="1">1</option>
+					      				<option value="2">2</option>
+					      				<option value="3">3</option>
+					      				<option value="5">4</option>
+					      				<option value="8">5</option>
+					      			</select>
+				      			</div>
+      						</td>
+      					</tr>
+      					<tr>
+      						<td>People are happy.</td>
+      						<td>
+	      						<div class="no-search">
+					      			<select data-placeholder="Choose a Point Value" class="chzn-select" style="width:50px;">
+					      				<option value="0">0</option>
+					      				<option value="1">1</option>
+					      				<option value="2">2</option>
+					      				<option value="3">3</option>
+					      				<option value="5">4</option>
+					      				<option value="8">5</option>
+					      			</select>
+				      			</div>
+      						</td>
+      					</tr>
+      					<tr>
+      						<td>Money maker.</td>
+      						<td>
+	      						<div class="no-search">
+					      			<select data-placeholder="Choose a Point Value" class="chzn-select" style="width:50px;">
+					      				<option value="0">0</option>
+					      				<option value="1">1</option>
+					      				<option value="2">2</option>
+					      				<option value="3">3</option>
+					      				<option value="5">4</option>
+					      				<option value="8">5</option>
+					      			</select>
+				      			</div>
+      						</td>
+      					<tr>
+      						<td>Provides cookies.</td>
+      						<td>
+	      						<div class="no-search">
+					      			<select data-placeholder="Choose a Point Value" class="chzn-select" style="width:50px;">
+					      				<option value="0">0</option>
+					      				<option value="1">1</option>
+					      				<option value="2">2</option>
+					      				<option value="3">3</option>
+					      				<option value="5">4</option>
+					      				<option value="8">5</option>
+					      			</select>
+				      			</div>
+      						</td>
+      					</tr>
+      				</tbody>
+      			</table>
+
+		        <h3>Acceptance Criteria</h3>
+		        <div class="us-section-header" style="padding:5px;">
+		        	<p><i class="icon-remove" title="Remove"></i> <input type="text" style="width:460px" value="It should have this."></input> <i class="icon-arrow-up" title="Move up"></i> <i class="icon-arrow-down" title="Move down"></i></p>
+							<p><i class="icon-remove" title="Remove"></i> <input type="text" style="width:460px" value="And more stuff like this."></input> <i class="icon-arrow-up" title="Move up"></i> <i class="icon-arrow-down" title="Move down"></i></p>
+		        	<a href="#">Add another Acceptance Criteria...</a>
+		        <br>
+		        </div>
+
+		        <br>
+		        <h3>Notes</h3>
+			        <textarea id="notes" rows="15" style="width:500px; resize:none;">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</textarea>
+      		</div>
+      	</div>
+      </div>
+      <div class="modal-footer">
+        <!--<a href="#" class="btn" data-dismiss="modal" >Close</a>-->
+        
+        <center><a href="#" class="btn btn-primary">Save changes</a></center>
+      </div>
+    </div>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><center>
+	    <a data-toggle="modal" href="#story_view" class="btn btn-primary btn-large">View</a>
+	    <a data-toggle="modal" href="#story_edit" class="btn btn-primary btn-large">Edit</a>
+	    </center>
+
+
+	</body>
+</html>
